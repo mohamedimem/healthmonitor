@@ -20,7 +20,7 @@ Food _$FoodFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Food {
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   int get calories => throw _privateConstructorUsedError;
   int get fat => throw _privateConstructorUsedError;
@@ -38,7 +38,7 @@ abstract class $FoodCopyWith<$Res> {
       _$FoodCopyWithImpl<$Res, Food>;
   @useResult
   $Res call(
-      {int id, String name, int calories, int fat, int sugar, int protein});
+      {String id, String name, int calories, int fat, int sugar, int protein});
 }
 
 /// @nodoc
@@ -65,7 +65,7 @@ class _$FoodCopyWithImpl<$Res, $Val extends Food>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -98,7 +98,7 @@ abstract class _$$FoodImplCopyWith<$Res> implements $FoodCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {int id, String name, int calories, int fat, int sugar, int protein});
+      {String id, String name, int calories, int fat, int sugar, int protein});
 }
 
 /// @nodoc
@@ -122,7 +122,7 @@ class __$$FoodImplCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -163,7 +163,7 @@ class _$FoodImpl extends _Food {
       _$$FoodImplFromJson(json);
 
   @override
-  final int id;
+  final String id;
   @override
   final String name;
   @override
@@ -215,7 +215,7 @@ class _$FoodImpl extends _Food {
 
 abstract class _Food extends Food {
   const factory _Food(
-      {required final int id,
+      {required final String id,
       required final String name,
       required final int calories,
       required final int fat,
@@ -226,7 +226,7 @@ abstract class _Food extends Food {
   factory _Food.fromJson(Map<String, dynamic> json) = _$FoodImpl.fromJson;
 
   @override
-  int get id;
+  String get id;
   @override
   String get name;
   @override

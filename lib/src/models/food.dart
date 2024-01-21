@@ -7,7 +7,7 @@ part 'food.g.dart';
 class Food with _$Food {
   const Food._();
   const factory Food({
-    required int id,
+    required String id,
     required String name,
     required int calories,
     required int fat,
@@ -16,4 +16,7 @@ class Food with _$Food {
   }) = _Food;
 
   factory Food.fromJson(Map<String, dynamic> json) => _$FoodFromJson(json);
+  String get caption {
+    return "calories= $calories and protein= $protein ";
+  }
 }

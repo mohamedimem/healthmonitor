@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:healthmonitor/src/screens/food_list_screen.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:path_provider/path_provider.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final directory = await getApplicationDocumentsDirectory();
+  await Hive.initFlutter(directory.path);
   runApp(ProviderScope(child: const MyApp()));
 }
 
@@ -19,7 +24,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const FoodListScreen());
+        home: FoodListScreen());
   }
 }
 
