@@ -9,13 +9,11 @@ class Food with _$Food {
   const factory Food({
     required int id,
     required String name,
-    required String calories,
-    required String fat,
-    required String sugar,
-    required String protein,
+    required int calories,
+    required int fat,
+    required int sugar,
+    required int protein,
   }) = _Food;
 
   factory Food.fromJson(Map<String, dynamic> json) => _$FoodFromJson(json);
-
-  
 }

@@ -22,10 +22,10 @@ Food _$FoodFromJson(Map<String, dynamic> json) {
 mixin _$Food {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String get calories => throw _privateConstructorUsedError;
-  String get fat => throw _privateConstructorUsedError;
-  String get sugar => throw _privateConstructorUsedError;
-  String get protein => throw _privateConstructorUsedError;
+  int get calories => throw _privateConstructorUsedError;
+  int get fat => throw _privateConstructorUsedError;
+  int get sugar => throw _privateConstructorUsedError;
+  int get protein => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,12 +38,7 @@ abstract class $FoodCopyWith<$Res> {
       _$FoodCopyWithImpl<$Res, Food>;
   @useResult
   $Res call(
-      {int id,
-      String name,
-      String calories,
-      String fat,
-      String sugar,
-      String protein});
+      {int id, String name, int calories, int fat, int sugar, int protein});
 }
 
 /// @nodoc
@@ -78,19 +73,19 @@ class _$FoodCopyWithImpl<$Res, $Val extends Food>
       calories: null == calories
           ? _value.calories
           : calories // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       fat: null == fat
           ? _value.fat
           : fat // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       sugar: null == sugar
           ? _value.sugar
           : sugar // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       protein: null == protein
           ? _value.protein
           : protein // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
     ) as $Val);
   }
 }
@@ -103,12 +98,7 @@ abstract class _$$FoodImplCopyWith<$Res> implements $FoodCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {int id,
-      String name,
-      String calories,
-      String fat,
-      String sugar,
-      String protein});
+      {int id, String name, int calories, int fat, int sugar, int protein});
 }
 
 /// @nodoc
@@ -140,19 +130,19 @@ class __$$FoodImplCopyWithImpl<$Res>
       calories: null == calories
           ? _value.calories
           : calories // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       fat: null == fat
           ? _value.fat
           : fat // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       sugar: null == sugar
           ? _value.sugar
           : sugar // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       protein: null == protein
           ? _value.protein
           : protein // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
     ));
   }
 }
@@ -177,13 +167,13 @@ class _$FoodImpl extends _Food {
   @override
   final String name;
   @override
-  final String calories;
+  final int calories;
   @override
-  final String fat;
+  final int fat;
   @override
-  final String sugar;
+  final int sugar;
   @override
-  final String protein;
+  final int protein;
 
   @override
   String toString() {
@@ -227,10 +217,10 @@ abstract class _Food extends Food {
   const factory _Food(
       {required final int id,
       required final String name,
-      required final String calories,
-      required final String fat,
-      required final String sugar,
-      required final String protein}) = _$FoodImpl;
+      required final int calories,
+      required final int fat,
+      required final int sugar,
+      required final int protein}) = _$FoodImpl;
   const _Food._() : super._();
 
   factory _Food.fromJson(Map<String, dynamic> json) = _$FoodImpl.fromJson;
@@ -240,13 +230,13 @@ abstract class _Food extends Food {
   @override
   String get name;
   @override
-  String get calories;
+  int get calories;
   @override
-  String get fat;
+  int get fat;
   @override
-  String get sugar;
+  int get sugar;
   @override
-  String get protein;
+  int get protein;
   @override
   @JsonKey(ignore: true)
   _$$FoodImplCopyWith<_$FoodImpl> get copyWith =>

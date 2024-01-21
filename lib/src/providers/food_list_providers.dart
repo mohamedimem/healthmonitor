@@ -19,22 +19,22 @@ class FoodListNotifier extends StateNotifier<List<Food>> {
 final foodListProvider =
     StateNotifierProvider.family<FoodListNotifier, List<Food>, FoodListType>(
         (ref, type) {
-  final foods = [
-    Food(
+  final  foods = [
+    const Food(
       id: 14,
       name: 'Bananna',
-      calories: "calories",
-      fat: "fat",
-      sugar: "sugar",
-      protein: "protein",
+      calories: 100,
+      fat: 1,
+      sugar: 2,
+      protein: 30,
     ),
-    Food(
+    const Food(
       id: 14,
       name: 'Apple',
-      calories: "calories",
-      fat: "fat",
-      sugar: "sugar",
-      protein: "protein",
+      calories: 100,
+      fat: 3,
+      sugar: 2,
+      protein: 30,
     )
   ];
 
